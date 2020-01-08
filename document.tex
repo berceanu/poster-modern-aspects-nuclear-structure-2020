@@ -1,0 +1,88 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+
+\usepackage[backend=biber,style=authoryear,sorting=ynt]{biblatex}
+\AtEveryBibitem{%
+  \clearfield{issn} % Remove issn
+  %\clearfield{doi} % Remove doi
+  %\clearfield{title} % Remove title
+
+  \ifentrytype{online}{}{% Remove url except for @online
+    \clearfield{url}
+  }
+}
+\addbibresource{document.bib}
+
+\makeatletter
+\renewcommand\maketitle{\AB@maketitle} % revert \maketitle to its old definition
+%\renewcommand\AB@affilsepx{\quad\protect\Affilfont} % put affiliations into one line
+\makeatother
+\renewcommand\Affilfont{\large} % set font for affiliations
+
+\title{\parbox{\linewidth}{\centering Finite temperature neutron capture study of tin isotopes}}
+
+\author[1]{A. C. Berceanu}
+\author[1, 2]{Y. F. Niu}
+\author[1]{Y. Xu}
+
+\affil[1]{ELI-NP, “Horia Hulubei” National Institute for Physics and Nuclear Engineering,
+30 Reactorului Street, RO-077125, Bucharest-Magurele, Romania}
+\affil[2]{School of Nuclear Science and Technology, Lanzhou University, Lanzhou 730000, China}
+
+% todo: remove
+\usepackage{blindtext}
+%\usepackage{comment}
+
+\usetheme{Board}
+
+
+\begin{document}
+
+\maketitle
+
+\block{~}
+{The r-process nucleosynthesis is responsible for the creation of about half of
+the atomic nuclei heavier than iron, under extreme density and temperature
+conditions. As such, the temperature dependence of neutron capture cross
+sections and rates is important for determining the reaction dynamics. As shown
+by the sensitivity study in~\cite{Mumpower2016}, neutron capture dynamics
+on Sn isotopes are very important for r-process study.  So in this work, we
+study the effect of finite temperature on the neutron-capture cross sections and
+rates of even-even tin isotopes, with neutron numbers between 76 and 96.  We
+compute the E1 dipole strengths, for both zero and finite temperature, using
+relativistic Hartree-Bogoliubov (RHB) + quasiparticle random phase approximation
+(QRPA) and finite-temperature relativistic mean-field (FTRMF) +
+finite-temperature random-phase approximation (FTRPA), respectively. We use the
+TALYS code for computing the corresponding cross sections, replacing its default
+E1 dipole data with ours.  We find out the main effect of temperature is to
+increase the low-lying E1 strength, and as a result, the neutron capture cross
+sections are increased several times up to the temperature of 2 MeV.}
+
+%\note[targetoffsetx=-9cm, targetoffsety=-6.5cm, width=0.5\linewidth]{e-mail \texttt{welcome@overleaf.com}}
+
+\begin{columns}
+    \column{0.4}
+    \block{More text}{Text and more text}
+ 
+    \column{0.6}
+    \block{Something else}{Here, \blindtext}
+\end{columns}
+ 
+\begin{columns}
+    \column{0.5}
+    \block{A figure}
+    {
+        \begin{tikzfigure}
+            \includegraphics[width=0.4\textwidth]{images/eli_logo.pdf}
+        \end{tikzfigure}
+    }
+    \column{0.5}
+    \block{Description of the figure}{\blindtext}
+\end{columns}
+ 
+\block{References}{
+    \printbibliography[heading=none]
+}
+
+\end{document}
