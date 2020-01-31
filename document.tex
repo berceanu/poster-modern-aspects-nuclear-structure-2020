@@ -53,26 +53,19 @@
     \column{0.5}
 
     \block{r-process}
-    {The r-process nucleosynthesis is responsible for the creation of about half of
-    the atomic nuclei heavier than iron, under extreme density and temperature
-    conditions. As such, the temperature dependence of neutron capture cross
-    sections and rates is important for determining the reaction dynamics. As shown
-    by the sensitivity study in~\cite{Mumpower2016}, neutron capture dynamics
-    on Sn isotopes are very important for r-process study.  So in this work, we
+    {As shown by the sensitivity study in~\cite{Mumpower2016}, neutron capture dynamics
+    on Sn isotopes are very important for r-process study.  We
     study the effect of finite temperature on the neutron-capture cross sections and
-    rates of even-even tin isotopes, with neutron numbers between 76 and 96.
+    capture rates of even-even tin isotopes, with neutron numbers between 76 and 96.
 	\begin{tikzfigure}
-	    \includegraphics[width=0.4\textwidth]{images/mumpower.pdf}
+	    \includegraphics[width=0.3\textwidth]{images/mumpower.pdf}
 	\end{tikzfigure}
    }
 
 	\block{Relativistic RPA at finite temperature}{
 
-We compute the E1 dipole strengths, for both zero and finite temperature, using
-    relativistic Hartree-Bogoliubov (RHB) + quasiparticle random phase approximation
-    (QRPA) and finite-temperature relativistic mean-field (FTRMF) +
-    finite-temperature random-phase approximation (FTRPA), respectively.  The same relativistic density functional is used for the mean field in FTRMF and for the residual two-body interaction in FTRRPA. The density-dependent meson-nucleon couplings are used in the relativistic Lagrangian, and we use the parameter set DD-ME2 \cite{Lala, Niu2009}.
-
+We compute the E1 dipole strengths using
+    RHB + QRPA and FTRMF + FTRPA, respectively.  
 	\begin{equation*}
 	   \left( \begin{array}{cc} A & B \\ -B^* & -A^* \end{array} \right)
 	   \left( \begin{array}{c} X \\ Y \end{array} \right)
@@ -95,24 +88,12 @@ We compute the E1 dipole strengths, for both zero and finite temperature, using
 	    \right)\; .
 	  \end{equation*}
 
-	$V$ is the residual two-body interaction, derived from the relativistic Lagrangian with  density-dependent meson-nucleon couplings \cite{Niksic}. The thermal occupation factors $n_k$ denote a Fermi-Dirac distribution for states in Fermi sea with index $m,i$, and $0$ for states in Dirac sea with index $\alpha$. The configuration space includes not only particle-hole (ph) pairs, but also particle-particle (pp) and hole-hole (hh) pairs. The transition strength for a multipole operator $Q_J$ is
-
-	\begin{equation*}
-	   B(J,E_\nu) = \left | \sum_{mi} (X^{\nu,J}_{mi} +
-	   (-1)^J Y^{\nu,J}_{mi} ) \langle m || Q_J || i\rangle (n_i
-	   -n_m) \right |^2.
-	\end{equation*}
-
-	The discrete spectra are averaged with a Lorentzian distribution of an width $\Gamma = 1 $ MeV.
-	We use the
-    TALYS code for computing the corresponding cross sections, replacing its default
-    E1 dipole data.
-}
+	$V$ is the residual two-body interaction and the thermal occupation factors $n_k$ denote a Fermi-Dirac distribution for states in the Fermi sea with index $m,i$, and $0$ for states in the Dirac sea with index $\alpha$. The configuration space also includes pp and hh pairs. We use TALYS for computing cross sections and capture rate.}
 
 	\block{E1 strength functions}
     {
         \begin{tikzfigure}
-            \includegraphics[width=0.4\textwidth]{images/colormesh.pdf}
+            \includegraphics[width=0.38\textwidth]{images/colormesh.pdf}
         \end{tikzfigure}
     }
 
