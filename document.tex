@@ -31,10 +31,6 @@
 30 Reactorului Street, RO-077125, Bucharest-Magurele, Romania}
 \affil[2]{School of Nuclear Science and Technology, Lanzhou University, Lanzhou 730000, China}
 
-% todo: remove
-\usepackage{blindtext}
-%\usepackage{comment}
-
 \usetheme{Board}
 
 
@@ -52,7 +48,7 @@
 \begin{columns}
     \column{0.5}
 
-    \block{r-process}
+    \block{Introduction}
     {As shown by the sensitivity study in~\cite{Mumpower2016}, neutron capture dynamics
 	    on Sn isotopes are very important for r-process study~(\cite{Litvinova_2009}). We
     study the effect of finite temperature on the neutron-capture cross sections and
@@ -62,9 +58,9 @@
 	\end{tikzfigure}
    }
 
-	\block{Relativistic RPA at finite temperature}{
+	\block{Formalism}{
 
-We compute the E1 dipole strengths using
+	We compute E1 dipole strengths at zero and finite temperature using
 RHB + QRPA and FTRMF + FTRPA, respectively~(\cite{Niu_2009}):
 	\begin{equation*}
 	   \left( \begin{array}{cc} A & B \\ -B^* & -A^* \end{array} \right)
@@ -103,7 +99,7 @@ RHB + QRPA and FTRMF + FTRPA, respectively~(\cite{Niu_2009}):
 
     \column{0.5}
 
-    \block{Cross section}{
+    \block{E1 strength and neutron capture cross section}{
         \begin{tikzfigure}
             \includegraphics[width=0.39\textwidth]{images/strength_cross_section.pdf}
         \end{tikzfigure}
@@ -111,7 +107,7 @@ RHB + QRPA and FTRMF + FTRPA, respectively~(\cite{Niu_2009}):
 
     \block{Neutron capture rate}{
         \begin{tikzfigure}
-            \includegraphics[width=0.21\textwidth]{images/capture_rate_vs_N.pdf}
+            \includegraphics[width=0.35\textwidth]{images/capture_rate_vs_N.pdf}
         \end{tikzfigure}
     }
 
